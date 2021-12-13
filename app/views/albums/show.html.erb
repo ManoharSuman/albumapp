@@ -1,0 +1,52 @@
+<div class="showhead">
+  <h2>Add a Photos</h2>
+  <%= form_with url: user_album_images_path(album_id: @album.id)  do |form| %>
+    <div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4">
+          <%= form.label :image %><br />
+          <%= form.file_field :image, :class => 'form-control' %> 
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4">
+          <%= form.label :name %><br />
+          <%= form.text_field :name, :class => 'form-control' %> 
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4">
+          <%= form.label :Tags %><br />
+          <%= form.text_field :all_tags, :class => 'form-control' %> 
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4">
+          <%= form.submit "Save", :class => 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<h2 id="phototitle"><%=@album.title%> Photos</h2>
+<% @album.images.each do |photo| %>
+  <div class="gallery">
+    <% if photo.image.attached? %>
+      <p>
+        <%= image_tag(photo.pics)%>
+      </p>
+      <h4><%= photo.name%></h4>
+      <h6><%= photo.all_tags%></h6>  
+      <h5>
+        <%= link_to "Delete",user_album_image_path(photo,user_id: current_user.id), :method => :delete,data: { confirm: "Are you sure?" } %>
+      </h5>  
+    <% end %> 
+  </div>
+<% end %>

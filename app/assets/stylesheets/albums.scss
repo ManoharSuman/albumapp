@@ -1,0 +1,93 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+div.gallery {
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 23vw;
+  text-align: center;
+  background-color:white;
+}
+  
+div.gallery:hover {
+  border: 1px solid #777;
+}
+  
+// div.showhead{
+//   border: 1px solid #ccc;
+//   margin-left: 5px;
+//   width: 100vw;
+//   display: flex;
+//   justify-content: space-between;
+//   background-color:#1abc9c;
+// }
+div.showhead h2{
+  text-align: center;
+}
+div.showhead-1{
+  text-align: center;
+  // background-color: #1abc9c;
+}
+div.albumhead{
+  background-color: black;
+  color: white;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  width: 97vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+h2#phototitle{
+  text-align: center;
+  color: black
+}
+// Form
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+input[type=button], input[type=submit] {
+  background-color: #4cacaf;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.footer{
+  padding: 20px;
+  text-align: center;
+  background: #aaa;
+}
+h1.newalbum{
+  text-align: center;
+}
+h2 a{
+  text-decoration: none;
+}
+h2.createalbum{
+  text-align: right;
+  color: white;
+  text-decoration: none;
+}
+#msg{
+  color: red;
+}
